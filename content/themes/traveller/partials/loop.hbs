@@ -1,0 +1,38 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+<div class="extra-pagination inner">
+    {{pagination}}
+     
+</div>
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+  {{#has tag="small feature"}}
+ <div class="col-6 col-sm-6 col-lg-4">
+    <article class="{{post_class}}">
+      <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+         <span  class="post-meta">
+           {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+           <span> By:</span> <strong>{{author}}</strong>
+           {{tags prefix=" on "}} 
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
+      </span>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt words="45"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    </section>
+   </article>
+   </div>
+   {{/has}}
+  {{/foreach}}
+{{! Previous/next page links - displayed on every page }}
+<div>  
+      <span> {{pagination}}</span>
+  </div>
+  <footer>
+  <div class="trv-subs">
+      <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/"></a> 
+<!--       <span> {{pagination}}</span>
+ -->  </div>
+
+</footer>

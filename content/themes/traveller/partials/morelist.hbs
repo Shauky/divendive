@@ -1,0 +1,17 @@
+   <div id="feed">
+      <ul class="trv-all-li trv-more-list">
+        <li> <span> LATEST PROMOTIONS </span><span><br><strong class="off-blue trv-tags"> Press Feed 
+          </strong></span></li>
+            {{#foreach posts}}
+               {{#has tag="feed-bg"}}
+                     <li><span  class="trv-promo-title"><a href="{{url}}">{{{title}}} </a></span> <span> <time class="post-date" datetime="{{date format='l'}}">{{date format="l"}} </time> </span> &nbsp; Lorem ipsor dolor si emet.Lorem ipsum dolor sit amet, consectetuer adipis </li>    
+            {{/has}}             
+            {{/foreach}}
+            <!-- Start displaying from the second post on -->
+            {{#foreach posts}}
+              {{#has tag="feed-sm"}}
+                 <li> <span class="trv-small-title"><a href="{{url}}">{{{title}}} </a><time class="post-date" datetime="{{date format='DD-MM-YY'}}">{{date format="DD/MM"}} </time> </span> &nbsp; Lorem ipsor dolor si emet.Lorem ipsum dolor sit amet, consectetuer adipis </li>
+              {{/has}}                 
+          {{/foreach}}
+     </ul>
+</div>

@@ -1,0 +1,76 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The main content area on the homepage }}
+
+{{{block "metaTags"}}}
+{{{block "sideBar"}}}
+{{{block "trvFeature"}}}
+{{{block "sideRight"}}}
+<!-- {{{block "moreList"}}} -->
+<!-- {{{block "trvFeed"}}}
+ -->
+
+{{! This includes some sidebar content}}
+{{> "side"}}
+<main id="content" class="content" role="main">
+  <div class="trv-feature-with-photo">
+    <section id="results" style="text-align:center"></section>
+    <script>
+            $("#search-field").ghostHunter({
+              results :"#results"
+            });
+    </script>
+    {{#foreach posts}}
+       {{#has tag="destination-update"}}
+     <h1><a href="{{url}}"> {{title}}</a> </h1>
+     <strong class="off-blue trv-tags"> {{tags}} </strong>
+     <p>{{content words="45"}}  </p>
+       {{/has}}
+    {{/foreach}}
+     <hr>
+  </div>
+ {{> "morelist"}}
+  {{#contentFor "sideRight"}}
+  <div class="trv-feature-guest-post">
+      <img class="trv-guest-img" src="{{asset "images/guest.jpg"}}"/>
+    <h4> When in Maldives do as...</h4>
+    <strong class="off-blue trv-tags"> Guest Post </strong>
+    <p>Lorem ipsor dolor si emet.Ut wisi enim ad minim veniam, quis nostrud exerci ta ullam corper suscipit.</p> 
+    <br>
+    <div class="trv-press">
+    <span> <small> OFF THE PRESS </small> </span>
+      <ul>
+         <li> <strong> Jason </strong> <span> on </span> The great escape </li>
+      </ul>
+    </div>
+   <div class="trv-press">
+    <span> <small> OUR GUEST BLOGGERS </small> </span>
+      <ul>
+         <li> Kevin Fallon </li>
+      </ul>
+  </div>
+  </div>
+  
+ {{/contentFor}}
+  <div class="trv-post-block col-xs-12 col-sm-9">
+    <p class="spacer" style="height:20px; width:550px;">
+    </p>
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+   </div>
+    {{{block "trvGuide"}}}
+            {{#contentFor "trvGuide"}}
+              <div class="container-fluid trv-guides">
+                  <h1> Guides </h1>
+
+              <!-- <ul class="trv-properties">
+                <li> PROPERTY GUIDES </li>
+                  <li> Restaurants (25) </li>
+                  <li> Facilities (132) </li>
+              </ul> -->
+
+              </div>
+    {{/contentFor}}
+  </div>
+</main>
