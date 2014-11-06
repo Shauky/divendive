@@ -1,67 +1,78 @@
 'use strict';
 
-var app = angular.module('angularapp', ['ui.bootstrap', 'ngResource','countrySelect'])
+var app = angular.module('angularapp', ['react', 'ui.bootstrap', 'ngResource','countrySelect'])
 
 // get Angular scope from the known DOM element
 
-.controller('contactController', function($scope, $http){
-   console.log("json app is loaded");
-   
+ .controller('boatController', function($scope, $http){
+ 		$scope.diver = 'Hello diver ';
+ 		$scope.boats = [
+ 						{'name': 'Eagle Ray',
+ 						 'image' : 'eaglesmall.jpg',
+ 						'details': 'The Eagle ray was built in 2005, and has room for 12 crew members and 18 passengers. Each cabin is 10 feet by 12 feet, and features air conditioning,hot\/\cold water.', 
+ 						'tourSchedule': '', 
+ 						'tripRating': {'tripName': '',
+ 						 			 'average': true,
+ 						 			 'satisfatory': false, 
+ 						 			 'excellent': false }
+ 						 }, {
+ 						'name': 'Sting Ray', 
+ 						'image' : 'stingroom.jpg',
+ 						'details': 'ThisLiveaboard is a liveaboard built for divers. The boat length of 110 ft. Boat is conveniently design to carter to the dive market. We have a reputation of running successful tours for more then a decade.', 
+ 						'tourSchedule': '', 
+ 						'tripRating': { 'tripName': '', 
+ 						 			'average': true, 
+ 						 			'satisfatory': false,
+ 			            			'excellent': false }
+ 			            		}
+ 			            ]
 
-   $scope.submit = function(isValid, data) {
-		if(!isValid) return;
+ 	    console.log("React is loaded");
+		$scope.boatschedule = {name: 'Eagle Ray'};
+ 		
+ 	 });
 
-	    var oldMessage = $scope.data; 
-	    
-	    var newMessage = [];
+			//    console.log("json app is loaded");
+			   
 
-		angular.forEach(oldMessage, function(detail){
-			if(detail!==null)
-				newMessage.push(detail);
-					sessionStorage.removeItem('details');
-					   localStorage.removeItem('details');
-					localStorage.setItem('details', JSON.stringify(newMessage));
+			//    $scope.submit = function(isValid, data) {
+			// 		if(!isValid) return;
 
-		
-		});
-		
+			// 	    var oldMessage = $scope.data; 
+				    
+			// 	    var newMessage = [];
 
+			// 		angular.forEach(oldMessage, function(detail){
+			// 			if(detail!==null)
+			// 				newMessage.push(detail);
+			// 					sessionStorage.removeItem('details');
+			// 					   localStorage.removeItem('details');
+			// 					localStorage.setItem('details', JSON.stringify(newMessage));
 
-		// $http({
-		// 	method: 'POST',
-		// 	url: '/thank',
-		// 	data: $scope.message
-		// }).success(function(res){
-		// 	
-		// 	console.log("The request was successful");
-		// }).error(function(res){
-		// 	console.log("Back to square one");
-		// });
-	};
+					
+			// 		});
+					
+			// 	};
 
-	$scope.saved = localStorage.getItem('details');
+			// 	$scope.saved = localStorage.getItem('details');
 
-    $scope.data = {
-		name: '',
-	   	checkModel: [{
-    		articles: false,
-    		news: true,
-    		publishing: false,
-    		advertising: false
-    		}],
-    	company: '',
-    	address: '',
-    	contactNum: '',
-    	selectedCountry: '',
-    	emailAdd: '',
-    	message: ''	
- 		};
+			//     $scope.data = {
+			// 		name: '',
+			// 	   	checkModel: [{
+			//     		articles: false,
+			//     		news: true,
+			//     		publishing: false,
+			//     		advertising: false
+			//     		}],
+			//     	company: '',
+			//     	address: '',
+			//     	contactNum: '',
+			//     	selectedCountry: '',
+			//     	emailAdd: '',
+			//     	message: ''	
+			//  		};
 
- 	$scope.singleModel = 1;
-
-
-});
-
+			//  	$scope.singleModel = 1;
 
 angular.module('countrySelect', []).directive('countrySelect', ['$parse', function($parse){
 	var countries = [

@@ -1,6 +1,33 @@
 {
   "name": "Traveller",
   "version": "0.0.1",
-  "details": "Inspired by Casper"
-
+  "details": "Inspired by Casper",
+  "homepage": "http://maldivestraveller.com",
+  "dependencies": {
+    "node-jsx": "~0.11.0",
+    "react": "~0.11.2",
+    "ngreact": "~0.1.0",
+    "assetmanager": "^1.1.1",
+    "socket.io": "^1.1.0",
+    "async": "~0.9.0",
+    "es5-shim": "~2.3.0",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1",
+    "react-router": "0.4.1",
+    "react-form-data": "~0.1.0"
+  },
+  "devDependencies": {
+    "jsx-loader": "git://github.com/petehunt/jsx-loader",
+    "coffee-loader": "~0.6.0",
+    "coffee-script": "1.6.3",
+    "script-loader": "~0.5.1",
+    "bower": "~1.2.8",
+    "envify": "~1.2.1",
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "~2.0.0"
+  },
+  "license": "MIT"
 }

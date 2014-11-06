@@ -45,12 +45,15 @@ button, input, select, textarea {
     box-shadow: 0 0 1.5px 1px #49b6b6;
 }
 
- #search-wrap {display: inline-block;float: right;height: 34px;margin: 0 10px;position: relative;}
+ #search-wrap {   display: inline-block;
+    float: right;
+    height: 34px;
+    margin: 0;
+    position: relative;}
     input[type="text"] {background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: medium none;
             color: white;cursor: pointer;display: inline-block;font-size: 9pt;font-weight: 100;
             height: 17px;outline: medium none;padding: 3px 10px 3px 3px;position: absolute;right: 5px;
             top: 7px;width: 0.5px;z-index: 3;transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000); 
-             margin-right: 30px;
         }
         input[type="text"]:focus:hover {border-bottom: 1px solid #BBB;}
             input[type="text"]:focus {width: 250px;z-index: 1;border-bottom: 1px solid #BBB;cursor: text;}
@@ -108,16 +111,77 @@ button, input, select, textarea {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 900px;
 }
 
+
 #header-wrapper {
-    /*position: fixed;*/
-    height: 160px;
+    /* fixed */
+    height: 380px;
     min-width: 100%;
-    width:0 auto; 
     z-index: 100;
-   }
+}
+
+
+/*===============================================
+Boat Guide styling 
+===============================================*/
+
+ul#boatname li, ul#boatname li span{
+    border-bottom: medium none;
+    font-weight: 100;
+    padding-right: 3%;
+    padding-top: 5px;
+}
+
+#boat-feature{
+    background-color: #f4f4f4;
+    float: right;
+    height: 382px;
+    margin-right: 2%;
+    margin-top: 0.2%;
+    position: relative;
+    width: 239px;
+}
+
+div.all-boats form.boat-search{
+    margin-top: 10px;
+
+}
+
+div.all-boats form.boat-search select{
+    padding-left: 10px;
+}
+
+form.boat-search span {
+    padding-right: 2px;
+    font-weight: 100;
+}
+
+form.boat-search select{
+    width: 120px;
+}
+
+
+
+div.content_wrap{
+    float: left;
+    width: 550px;
+
+}
+
+ul.boatlist {
+   display: inline-flex;
+    width: 420px;
+}
+
+ul.boatlist ul{
+    width: 500px;
+}
+
+ul.boatlist ul:nth-child(1){
+    margin-right: 20px;
+    padding: 0;
+}
 
 /*===============================================
 Traveller Guide styling 
@@ -138,15 +202,11 @@ div.trv-guides {
     float: left;
     position: relative;
     vertical-align: bottom;
-    width: 100%;
+    width: 98.2%;
 }
 
-
-
 .container{
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    padding: 0.425%;
+    padding: 0.95%;
 }
    /*Traveller templating */
     .trv-sidebar-left section, .trv-stats-left {
@@ -171,10 +231,10 @@ div.trv-guides {
     }
 
     #trv-sidebar-left {
-        width:150px;
-        height: auto 0;
-        float:left;
-        position: absolute;
+        float: left;
+        height: auto;
+        position: relative;
+        width: 450px;
     }
 
 
@@ -228,10 +288,11 @@ div.trv-guides {
 
 
     #trv-sidebar-left h1 {
-        font-size:12pt;
-        font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
+        font-family: "Open Sans","Source Sans Pro",sans-serif;
+        font-size: 12pt;
         font-weight: 600;
         letter-spacing: 0.02em;
+        padding-left: 1%;
         position: relative;
         text-transform: uppercase;
     }
@@ -242,6 +303,7 @@ div.trv-guides {
     }
 
     .trv-tiny, .trv-tiny p{
+        font-size: 10pt;
         word-wrap: break-word;
     }
 
@@ -268,14 +330,15 @@ div.trv-guides {
     } 
 
     .trv-subs a{
-        position: relative;
-        margin: 0 55%;    
+    margin: 0 77%;
+    position: relative;    
     }
 
     .trv-feature-with-photo {
         float: left;
-        width: 540px;
-    }
+        padding-left: 1%;
+        width: 515px;
+       }
     .trv-feature-with-photo strong > a {
         color: white;
         text-decoration: none;
@@ -293,7 +356,7 @@ div.trv-guides {
 
     .trv-feature-guest-post {
         float: right;
-        width: 155px;
+        width: 200px;
         padding-left: 1%;
         border-left: 1px solid #ddd;
         height:0 auto;
@@ -307,13 +370,12 @@ div.trv-guides {
 
 
     .trv-press {
-         float: right;
         line-height: 1em;
         margin-left: 9px;
+        padding-bottom: 10%;
         position: relative;
         width: 150px;
         word-wrap: break-word;
-        padding-bottom: 10%;
             }
 
     .trv-press span > small {
@@ -332,7 +394,7 @@ div.trv-guides {
     .trv-tags {
         font-family: 'Open Sans';
         text-transform: uppercase;
-        font-size: 8pt;
+        font-size: 9pt;
         padding: 0.225em;
         color: white;
 
@@ -350,9 +412,7 @@ div.trv-guides {
         -moz-font-feature-settings: "liga", "onum", "kern";
         font-size: 8pt;
         list-style: none outside none;
-        margin-left: 19px;
         max-width: 550px;
-        padding-left: 1%;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
@@ -360,16 +420,14 @@ div.trv-guides {
 
     .trv-more-list span, .trv-more-list span .post-title {
         font-weight: 600;
-         font-size: 9pt;
+         font-size: 10pt;
     }
     .trv-all-li li{
         border-bottom: 1px solid #bbb;
-        font-size: 10pt;
+        font-size: 8.5pt;
         list-style: none outside none;
         padding-bottom: 1%;
-        padding-top: 1%;
-        width: 540px;;
-    }
+        width: 500px;    }
 
     .trv-small-title{
         font-family: 'Open Sans','Source Sans Pro',sans-serif;
@@ -426,8 +484,8 @@ div.trv-guides {
     }
 
     #feed, #content{
-        position: relative;
-        padding-left: 9%;
+           width: 1000px;
+
     }
 
     /* ==========================================================================
@@ -687,7 +745,8 @@ table { border-collapse: collapse; border-spacing: 0; }
     content: "\f604";
 }
 .icon-arrow-left:before {
-    content: "\f605";
+     //"\f605"
+
 }
 .icon-stats:before {
     content: "\f606";
@@ -716,10 +775,10 @@ html {
 body {
      height: 100%;
     max-height: 100%;
-    font-family: adobe-garamond-pro;
+    font-family: Open Sans, sans-serif;
     font-size: 1.425rem;
     line-height: 1.6em;
-    color: #3A4145;
+    background-color: #f4f4f4;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -ms-font-feature-settings: 'kern' 1;
@@ -804,7 +863,7 @@ ol, ul {
 ol ol, ul ul,
 ul ol, ol ul {
     margin: 0 0 0.4em 0;
-    padding-left: 2em;
+    padding-left: 1em;
 }
 
 dl dt {
@@ -926,7 +985,6 @@ table {
 
 table th,
 table td {
-    padding: 8px;
     line-height: 20px;
     text-align: left;
     vertical-align: top;
@@ -1013,11 +1071,8 @@ margin on the iframe, cause it breaks stuff. */
 /* Big cover image on the home page */
 .main-header{
     position: absolute;
-    left: 42.5%;
-    top:2%;
-    margin-left: -250px;
     text-align: center;
-    width:500px !important;
+    width:100vw !important;
     z-index: 2000;
 }
 
@@ -1029,19 +1084,20 @@ margin on the iframe, cause it breaks stuff. */
  }
 
 #trv-inner{
-     background: none repeat-x scroll 0 0 gray;
+      background: none repeat-x scroll 0 0 gray;
     color: white;
     font-family: "Open Sans";
-    font-size: 9pt;
+    font-size: 10pt;
     font-weight: 600;
-    height: 35px;
+    height: 38px;
+    margin-top: -6px; 
 }
 #trv-inner > .dropdown{
-    margin-left: 22vw;
-    min-width: 600px;
+       margin-left: 20%;
+    min-width: 800px;
     padding-right: 5vw;
     position: relative;
-    width: 50%;
+    width: 57%;
 
 }
 
@@ -1062,21 +1118,19 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
+    animation: 4s ease 2s normal none infinite bounce;
+    color: rgba(255, 255, 255, 0.698);
     display: block;
-    position: absolute;
-    z-index: 100;
-    bottom: 45px;
+    font-size: 34px;
+    height: 34px;
     left: 50%;
     margin-left: -16px;
-    width: 34px;
-    height: 34px;
-    font-size: 34px;
+    margin-top: 5px;
+    position: absolute;
     text-align: center;
     text-decoration: none;
-    color: rgba(255,255,255,0.7);
-    transform: rotate(-90deg);
-    -webkit-animation: bounce 4s 2s infinite;
-    animation: bounce 4s 2s infinite;
+    width: 34px;
+    z-index: 100;
 }
 
 /* Stop it bouncing and increase contrast when hovered */
@@ -1246,10 +1300,13 @@ margin on the iframe, cause it breaks stuff. */
     animation-delay: 0.2s;
 }
 .home-template .page-description {
-    -webkit-animation: fade-in-down 0.9s;
-    animation: fade-in-down 0.9s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+    animation: 0.9s ease 0.1s normal none 1 fade-in-down;
+    color: #fff;
+    font-family: Open Sans;
+    font-size: 9pt;
+    margin-left: 45vw;
+    margin-top: -5%;
+    position: relative;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -1766,10 +1823,9 @@ body:not(.post-template) .post-title {
 }
 
 .page-number {
-    display: inline-block;
     min-width: 50%;
+    padding-left: 65%;
     padding-top: 20%;
-    padding-left: 76%;
 }
 
 .newer-posts {
@@ -1822,14 +1878,17 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .site-footer {
-    position: relative;
-    margin: 8rem 0 0 0;
-    padding: 0.5rem 15px;
-    border-top: #EBF2F6 1px solid;
-    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    border-top: 1px solid #ebf2f6;
+    clear: both;
+    color: #bbc7cc;
+    font-family: "Open Sans",sans-serif;
     font-size: 1rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    margin: 8rem auto 0;
+    padding: 2rem 19px 90px;
+    position: relative;
+    width: 1024px;
 }
 
 .site-footer a {
@@ -2110,7 +2169,10 @@ body:not(.post-template) .post-title {
     }
 
     .blog-logo img {
-        max-height: 80px;
+       margin-top: -13%;
+    max-height: 80px;
+    padding-left: 44vw;
+    z-index: 900;
     }
 
     .inner,
@@ -2315,30 +2377,30 @@ body:not(.post-template) .post-title {
 /* Used to bounce .scroll-down on home page */
 @-webkit-keyframes bounce {
     0%, 10%, 25%, 40%, 50% {
-        -webkit-transform: translateY(0) rotate(-90deg);
-                transform: translateY(0) rotate(-90deg);
+        -webkit-transform: translateY(0) rotate(0deg);
+                transform: translateY(0) rotate(0deg);
     }
     20% {
-        -webkit-transform: translateY(-10px) rotate(-90deg);
-                transform: translateY(-10px) rotate(-90deg);
+        -webkit-transform: translateY(-10px) rotate(0deg);
+                transform: translateY(-10px) rotate(0deg);
     }
     30% {
-        -webkit-transform: translateY(-5px) rotate(-90deg);
-                transform: translateY(-5px) rotate(-90deg);
+        -webkit-transform: translateY(-5px) rotate(0deg);
+                transform: translateY(-5px) rotate(0deg);
     }
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        -webkit-transform: translateY(0) rotate(-90deg);
-                transform: translateY(0) rotate(-90deg);
+        -webkit-transform: translateY(0) rotate(0deg);
+                transform: translateY(0) rotate(0deg);
     }
     40% {
-        -webkit-transform: translateY(-10px) rotate(-90deg);
-                transform: translateY(-10px) rotate(-90deg);
+        -webkit-transform: translateY(-10px) rotate(0deg);
+                transform: translateY(-10px) rotate(0deg);
     }
     60% {
-        -webkit-transform: translateY(-5px) rotate(-90deg);
-                transform: translateY(-5px) rotate(-90deg);
+        -webkit-transform: translateY(-5px) rotate(0deg);
+                transform: translateY(-5px) rotate(0deg);
     }
 }
 

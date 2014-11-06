@@ -4,16 +4,16 @@
 {{! The main content area on the homepage }}
 
 {{{block "metaTags"}}}
-{{{block "sideBar"}}}
-{{{block "trvFeature"}}}
+<!-- {{{block "trvFeature"}}}
+ -->{{{block "sideBar"}}}
 {{{block "sideRight"}}}
 <!-- {{{block "moreList"}}} -->
 <!-- {{{block "trvFeed"}}}
  -->
 
 {{! This includes some sidebar content}}
-{{> "side"}}
 <main id="content" class="content" role="main">
+<div class="content_wrap">
   <div class="trv-feature-with-photo">
     <section id="results" style="text-align:center"></section>
     <script>
@@ -29,8 +29,15 @@
        {{/has}}
     {{/foreach}}
      <hr>
-  </div>
+      </div>
  {{> "morelist"}}
+   </div>
+
+ <div id="boat-feature">
+      <p> Here comes the pain </p>
+      <p> One after the other </p>
+  </div>
+ {{> "side"}}
   {{#contentFor "sideRight"}}
   <div class="trv-feature-guest-post">
       <img class="trv-guest-img" src="{{asset "images/guest.jpg"}}"/>
@@ -40,7 +47,7 @@
     <br>
     <div class="trv-press">
     <span> <small> OFF THE PRESS </small> </span>
-      <ul>
+      <ul id="boats">
          <li> <strong> Jason </strong> <span> on </span> The great escape </li>
       </ul>
     </div>
@@ -62,7 +69,7 @@
     {{{block "trvGuide"}}}
             {{#contentFor "trvGuide"}}
               <div class="container-fluid trv-guides">
-                  <h1> Guides </h1>
+                  <h1> Dive Holidays </h1>
 
               <!-- <ul class="trv-properties">
                 <li> PROPERTY GUIDES </li>

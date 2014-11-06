@@ -1,0 +1,81 @@
+Todo on current task
+
+
+-- BoatWrapper   includes the search too
+  -- Tourcat
+    --Search form
+     --Boatlist
+      -- boat
+
+- PhoneCatWrapper (blue)
+  - PhoneCat (yellow)
+    - SearchForm (red)
+    - PhonesList (orange)
+      - Phone (green)
+
+
+
+
+Keep it simple
+
+Build tour components with reactjs (data, icons included) 
+Change Authors/ Licence files
+Sever angular to handle data and forms from app itself. Angular now served from content folder
+
+Dont refresh page, layout, layout....phonecat next
+ - Bring contact form and boat page upto date
+ 			Boat form
+ 			Link buttons <--- icons, List, Rate, Like, Share   (react)
+ 			Writers, offers
+
+ - torture myself by learning perl
+
+Minimum marketable features
+Serve react
+	 -  Browse boats by itinerary 
+	 -  Give details of tour, itinerary   <--- later stage
+	 - Search by price and intinerary
+
+	 - Dive holidays bottom link should have more blog entires on left, then packages on the right
+
+*** Engineering task
+	- Look into mongodb storage using Node and react
+	- Boat listing, search/ Later all properties
+		Schedule needs to be selectable, by boat, price, itinerary
+		Then booking form
+		Then email
+
+		- Dive holidays Json
+		- Writers Json
+		- Offers Json
+
+	- Contact page
+
+	- Small Json/Angular form for entries. Manager page
+
+	- Tour listing/ Liveaboard 
+			Needs to go to booking form
+
+
+	- Booking form
+
+
+Bugs
+- Cant select text on blog
+- require needs full path for files, ghost problem?
+- Require manifest doest update immediately -- (usually three refreshes)
+
+- Serve data 
+	with Loopback\
+    	 strongloop
+     	loopbuntub2 localhost 8000 serves mean app 
+     	                                             2368 serves ghost   
+     	                                             ****localhost 8080 services strongloop 
+     												  *mongodb://localhost:27017/boatDB serves mongo
+
+		Connect react on the client (html)
+		Connect to mongo datasource
+    	// browserify -r ./content/themes/traveller/assets/js/trvrapp.js > ./content/themes/traveller/assets/js/bundle.js
+		Connect db to mms.mongodb.com
+
+system/public/routes/system.js     index.htm + header.htm

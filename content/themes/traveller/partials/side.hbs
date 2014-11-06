@@ -1,29 +1,14 @@
 <div id="trv-sidebar-left">
-<section>
-    <div class="addthis_sharing_toolbox">
-    </div> 
-</section>
     <hr>
-    <h1> Travel News </h1>
+    <h1> Maldives Liveaboards </h1>
   {{#foreach posts}}
-                {{#has tag="getting-started"}}   
-                <span class="trv-tiny">        
-                  <a href="{{url absolute="true"}}"> <span class="trv-promo-title">{{title}} </span> </a>
-                          <p>{{excerpt words="6"}}</p> 
+                {{#has tag="boats"}}   
+                <span class="trv-tiny">   
+                 <div>     
+<!--                   <a href="{{url absolute="true"}}"> <span class="trv-promo-title">{{title}} </span> </a>
+ -->                          {{content}}
+                  </div> 
                 </span>
                 {{/has}}
     {{/foreach}}    
-<div id="trv-adright">
-        <p>150 X 600 </p>
-    </div>
 </div>    
-{{#contentFor "sideBar"}}
-<div>   
-       <section class="trv-stats-left">
-            <span> 285 </span> <p> press items </p>
-            <span> 1450 </span> <p> page views </p>
-            <span> 10 </span> <p> Guides </p>
-        </section>
-    <!-- travel news and other content here  -->
-</div>
-{{/contentFor}}
